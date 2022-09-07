@@ -26,7 +26,7 @@ class DisplayPredictions:
 
     def __displayDataFrame(self):
         self.dataframe = self.dataframe.sort_values(by=['key'], ascending=False)
-        self.dataframe['last_season_points_per_game'] = self.dataframe['last_season_points_per_game'].round(2)
+        self.dataframe['last_season_points_per_game'] = self.dataframe['last_season_points_per_game'].astype(int)
         #st.dataframe(self.dataframe[['name', 'position', 'predicted_range', 'team', 'age', 'last_season_points_per_game']],
         #            height=500, width=800)
         grid_options = {'columnDefs':   [ {'field': 'name', 
@@ -44,8 +44,7 @@ class DisplayPredictions:
                                            'headerName': 'Age'},
                                           {'field': 'last_season_points_per_game', 
                                            'headerName': 'Previous Season Points Per Game',
-                                           'sortable': True,
-                                           'valueFormatter': 'currencyFormatter'} 
+                                           'sortable': True} 
                                         ],
                         "rowSelection": "single",
                         'rowDragManaged': True,
