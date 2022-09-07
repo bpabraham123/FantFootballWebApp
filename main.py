@@ -1,9 +1,5 @@
 import streamlit as st
 import pandas as pd
-from st_aggrid import AgGrid, GridOptionsBuilder, JsCode, GridUpdateMode
-import nfl_data_py as nfl
-import numpy as np
-import requests
 from PredictionsPage import DisplayPredictions
 from AnalysisPage import DisplayAnalysisPage
 from HomePage import DisplayHomePage

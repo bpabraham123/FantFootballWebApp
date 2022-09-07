@@ -1,4 +1,3 @@
-from select import select
 import streamlit as st
 import pandas as pd
 import nfl_data_py as nfl

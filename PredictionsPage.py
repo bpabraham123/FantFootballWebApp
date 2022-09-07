@@ -1,9 +1,8 @@
 import streamlit as st
 import pandas as pd
-from st_aggrid import AgGrid, GridOptionsBuilder, JsCode, GridUpdateMode
+#from st_aggrid import AgGrid, GridOptionsBuilder, JsCode, GridUpdateMode
 import nfl_data_py as nfl
 import numpy as np
-import requests
 
 
 class DisplayPredictions:
@@ -27,6 +26,8 @@ class DisplayPredictions:
 
     def __displayDataFrame(self):
         self.dataframe = self.dataframe.sort_values(by=['key'], ascending=False)
+        st.dataframe(self.dataframe[['name', 'position', 'predicted_range', 'team', 'age', 'last_season_points_per_game']])
+        '''
         grid_options = {'columnDefs':   [ {'field': 'name', 
                                            'headerName': 'Player'
                                           },
@@ -59,4 +60,4 @@ class DisplayPredictions:
                height=500,
                allow_unsafe_jscode=True,
                enable_enterprise_modules=True,
-               update_mode=GridUpdateMode.SELECTION_CHANGED)
+               update_mode=GridUpdateMode.SELECTION_CHANGED)'''
