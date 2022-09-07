@@ -44,7 +44,8 @@ class DisplayPredictions:
                                            'headerName': 'Age'},
                                           {'field': 'last_season_points_per_game', 
                                            'headerName': 'Previous Season Points Per Game',
-                                           'sortable': True} 
+                                           'sortable': True,
+                                           'valueFormatter': 'currencyFormatter'} 
                                         ],
                         "rowSelection": "single",
                         'rowDragManaged': True,
