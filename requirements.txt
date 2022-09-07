@@ -3,3 +3,4 @@ pandas==1.4.2
 nfl-data-py==0.2.7
 plotly==5.10.0
 numpy==1.22.3
+streamlit-aggrid==0.2.3
