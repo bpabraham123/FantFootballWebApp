@@ -25,9 +25,9 @@ class DisplayAnalysisPage:
      
 
     def __displayDataFrames(self):
-        col1, nullCol, col2 = st.columns([5, 1, 5])
         selectedIds = [self.players[player]['id'] for player in self.playerNames]
         selectedData = self.data.loc[selectedIds]
+        selectedData.sort_values(by='season', inplace=True)
         plot = px.scatter(selectedData, 
                           x="season", 
                           y=self.column, 
